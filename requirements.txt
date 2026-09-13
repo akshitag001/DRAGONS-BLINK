@@ -1,0 +1,10 @@
+opencv-python
+numpy
+onnxruntime
+pyvirtualcam
+qai-hub
+qai_hub_models
+scikit-image
+torch
+ultralytics
+flask

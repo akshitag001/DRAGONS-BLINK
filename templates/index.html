@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrivacyGuard Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>PrivacyGuard</h1>
+            <p>Real-time NPU hardware-accelerated redaction pipeline.</p>
+        </header>
+
+        <main>
+            <div class="glass-panel controls">
+                <h2>Redaction Settings</h2>
+                
+                <div class="toggle-group">
+                    <label class="toggle-label">
+                        <div class="toggle-text">
+                            <span class="toggle-title">Blur Faces</span>
+                            <span class="toggle-desc">Detect and redact human faces</span>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="toggle-faces" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </label>
+                </div>
+
+                <div class="toggle-group">
+                    <label class="toggle-label">
+                        <div class="toggle-text">
+                            <span class="toggle-title">Blur ID/Credit Cards</span>
+                            <span class="toggle-desc">Detect and redact sensitive cards</span>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="toggle-cards" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </label>
+                </div>
+            </div>
+
+            <div class="glass-panel metrics">
+                <h2>Live Telemetry</h2>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <h3 class="metric-value" id="val-fps">0.0</h3>
+                        <span class="metric-label">Pipeline FPS</span>
+                    </div>
+                    <div class="metric-card">
+                        <h3 class="metric-value" id="val-faces">0</h3>
+                        <span class="metric-label">Faces Blocked</span>
+                    </div>
+                    <div class="metric-card">
+                        <h3 class="metric-value" id="val-cards">0</h3>
+                        <span class="metric-label">Cards Blocked</span>
+                    </div>
+                </div>
+                <div class="status-indicator">
+                    <div class="pulse-dot active" id="status-dot"></div>
+                    <span id="status-text">Pipeline Active</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

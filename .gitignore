@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+profiling_results.json
+models/*.onnx
+data/
+yolov8n.pt
+runs/
